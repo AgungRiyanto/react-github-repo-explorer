@@ -6,6 +6,7 @@ import UserItem from "@/components/UserItem";
 import useGetRepositoryList from "@/hooks/useGetRepositoryList";
 import useGetUserList from "@/hooks/useGetUserList";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [expandedUser, setExpandedUser] = useState("");
@@ -33,10 +34,20 @@ export default function Home() {
 
   return (
     <div className="min-h-screen justify-center font-[family-name:var(--font-geist-sans)]">
-      <main className="max-w-full lg:max-w-xl mx-auto">
+      <main className="max-w-full lg:max-w-xl mx-auto pb-10">
         {/* header */}
         <div className="py-4">
           <h3 className="text-center font-bold">Github Repository Explorer</h3>
+          <h4 className="text-center text-sm">
+            Made by{" "}
+            <Link
+              className="text-[#2c9cdb]"
+              href="https://github.com/AgungRiyanto"
+              target={"_blank"}
+            >
+              Agung Riyanto
+            </Link>
+          </h4>
         </div>
         {/* search section */}
         <SearchSection onSearch={handleSearch} />
