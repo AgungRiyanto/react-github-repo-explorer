@@ -1,6 +1,5 @@
 import useGitHubAPI from "@/services/useGithubAPI";
 import { IRepository } from "@/interfaces/repository.interface";
-import { IUser } from "@/interfaces/user.interface";
 
 const useGetRepositoryList = () => {
   const { data, error, loading, fetchGitHubData } = useGitHubAPI<

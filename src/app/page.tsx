@@ -17,7 +17,6 @@ export default function Home() {
 
   const {
     data: repos,
-    error: errorRepos,
     loading: loadingRepos,
     fetchRepository,
   } = useGetRepositoryList();
@@ -30,8 +29,6 @@ export default function Home() {
     setExpandedUser(username);
     fetchRepository(username);
   };
-
-  console.log("repos", errorUser);
 
   return (
     <div className="min-h-screen justify-center font-[family-name:var(--font-geist-sans)]">
