@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import SearchSection from "@/components/SearchSection";
 import Spinner from "@/components/Spinner";
 import UserItem from "@/components/UserItem";
